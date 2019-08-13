@@ -20,7 +20,10 @@ const ToolSchema = new mongoose.Schema({
     required: true
   },
   tags: [String]
-});
+},
+  {
+    versionKey: false
+  });
 
 ToolSchema.plugin(autoIncrement.plugin, {
   model: "Tool",
