@@ -4,6 +4,7 @@ import ToolController from "./app/controllers/ToolController";
 
 const routes = new Router();
 
-routes.post("/register", ToolController.store);
+routes.get("/tools", ToolController.index);
+routes.post("/tools", ToolController.store);
 
 export default routes;
