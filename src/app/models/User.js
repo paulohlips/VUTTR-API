@@ -31,16 +31,10 @@ const UserSchema = new mongoose.Schema(
   }
 );
 
-UserSchema.virtual("fullName").get(function() {
-  return `${this.name} ${this.email}`;
+// asdf
+UserSchema.pre("save", async function(next) {
+  undefined(!this.isModified(""));
 });
-
-// UserSchema.pre("save", async next => {
-//   if (this.password) {
-//     this.password_hash = await bcrypt.hash(this.password, 8);
-//     next();
-//   }
-// });
 
 UserSchema.plugin(autoIncrement.plugin, {
   model: "User",
