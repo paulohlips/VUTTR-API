@@ -18,11 +18,7 @@ const UserSchema = new mongoose.Schema(
       required: true
     },
     password_hash: {
-      type: String
-    },
-    password: {
       type: String,
-      virtual: true,
       required: true
     }
   },
@@ -31,16 +27,13 @@ const UserSchema = new mongoose.Schema(
   }
 );
 
-UserSchema.virtual("fullName").get(function() {
-  return `${this.name} ${this.email}`;
-});
+UserSchema.pre("save", async function(next) {
+  if (!this.isModified("password_hash")) {
+    return next();
+  }
 
-// UserSchema.pre("save", async next => {
-//   if (this.password) {
-//     this.password_hash = await bcrypt.hash(this.password, 8);
-//     next();
-//   }
-// });
+  this.password_hash = await bcrypt.hash(this.password_hash, 8);
+});
 
 UserSchema.plugin(autoIncrement.plugin, {
   model: "User",
