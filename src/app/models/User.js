@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true
     },
-    password_hash: {
+    password: {
       type: String,
       required: true
     }
@@ -28,11 +28,11 @@ const UserSchema = new mongoose.Schema(
 );
 
 UserSchema.pre("save", async function(next) {
-  if (!this.isModified("password_hash")) {
+  if (!this.isModified("password")) {
     return next();
   }
 
-  this.password_hash = await bcrypt.hash(this.password_hash, 8);
+  this.password = await bcrypt.hash(this.password, 8);
 });
 
 UserSchema.plugin(autoIncrement.plugin, {

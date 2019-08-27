@@ -28,11 +28,34 @@ class ToolController {
     }
   }
 
+  //UPDATE
+  async update(req, res) {
+    const toolToUpdate = await Tool.findOne({
+      _id: req.params.id
+    });
+
+    if (!toolToUpdate) {
+      return res.status(400).json({ error: "Tool requested dont exists." });
+    }
+
+    const tool = await Tool.update(req.body);
+
+    return res.status(201).json({ message: "Tool has been modified." });
+  }
+
   // DELETE
   async delete(req, res) {
+    const toolToDelete = await Tool.findOne({
+      _id: req.params.id
+    });
+
+    if (!toolToDelete) {
+      return res.status(400).json({ error: "Tool dont exists." });
+    }
+
     const result = await Tool.deleteOne({ _id: req.params.id });
 
-    return res.status(204).json({ result });
+    return res.status(204).json({ message: "Tool has been deleted." });
   }
 }
 
