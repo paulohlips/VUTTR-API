@@ -19,8 +19,21 @@ class ToolController {
 
   // POST
   async store(req, res) {
+    const { title } = req.body;
+
+    const verification = await Tool.findOne({ title });
+
+    if (verification) {
+      return res.status(400).json({ message: "Tool already exists" });
+    }
     try {
       const tool = await Tool.create(req.body);
+
+      if (!tool) {
+        return res
+          .status(400)
+          .json({ message: "Title, link, description and tags are required" });
+      }
 
       return res.status(201).json({ tool });
     } catch (err) {
@@ -28,14 +41,14 @@ class ToolController {
     }
   }
 
-  //UPDATE
+  // UPDATE
   async update(req, res) {
     const toolToUpdate = await Tool.findOne({
       _id: req.params.id
     });
 
     if (!toolToUpdate) {
-      return res.status(400).json({ error: "Tool requested dont exists." });
+      return res.status(400).json({ error: "Tool requested doest exists." });
     }
 
     const tool = await Tool.update(req.body);
