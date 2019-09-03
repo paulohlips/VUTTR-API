@@ -7,7 +7,7 @@ import AuthMiddleware from "./app/middleware/auth";
 
 const routes = new Router();
 
-routes.get("/", (req, res) => res.send("Welcome to VUTTR API!!"));
+routes.get("/", (req, res) => res.send("Welcome to VUTTR API!!!"));
 
 routes.get("/users", UserController.index);
 routes.post("/users", UserController.store);
