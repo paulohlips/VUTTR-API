@@ -7,7 +7,7 @@ import AuthMiddleware from "./app/middleware/auth";
 
 const routes = new Router();
 
-routes.get("/", (req, res) => res.send("Welcome to VUTTR API!!!"));
+routes.get("/", (req, res) => res.send("Welcome to VUTTR API, you can access de swagger documentation at https://app.swaggerhub.com/apis/paulohlips/vuttr-api/v1"));
 
 routes.get("/users", UserController.index);
 routes.post("/users", UserController.store);
