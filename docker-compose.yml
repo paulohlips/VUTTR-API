@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    ports:
+      - "3001:3001"
+  mongo:
+    image: 'mongo:latest'
+    command: mongod --port 27018
+    ports:
+        - '27018:27018'
+    command: yarn dev
