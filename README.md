@@ -59,7 +59,7 @@ npm install
 
 ### Running VUTTR-API
 
-Iniciar a aplicação em modo de desenvolvimento:
+Starting app on developer mode:
 
 ```
 yarn dev
@@ -73,7 +73,7 @@ http://locahost:3000
 
 ## Docker & Containerization
 
-Its possible build a docker container running the follow commands:
+Is possible build a docker container, if tou have docker and docker-compose installed,running the follow commands:
 
 ```
 docker-compose build --no-cache
@@ -86,5 +86,5 @@ docker-compose up -d
 The container will be running on
 
 ```
-http://localhost:3001
+http://localhost:3003
 ```
