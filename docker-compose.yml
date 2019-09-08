@@ -1,13 +1,11 @@
-version: "3"
-
+version: "2"
 services:
   app:
     build: .
+    image: vuttr_api
     ports:
-      - "3001:3001"
-  mongo:
-    image: 'mongo:latest'
-    command: mongod --port 27018
-    ports:
-        - '27018:27018'
-    command: yarn dev
+      - "3003:3003"
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:3.2.5

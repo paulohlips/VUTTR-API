@@ -1,9 +1,18 @@
-"use strict"; function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }Object.defineProperty(exports, "__esModule", {value: true});var _express = require('express');
+"use strict";
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+var _express = require("express");
 
-var _ToolController = require('./app/controllers/ToolController'); var _ToolController2 = _interopRequireDefault(_ToolController);
-var _UserController = require('./app/controllers/UserController'); var _UserController2 = _interopRequireDefault(_UserController);
-var _SessionController = require('./app/controllers/SessionController'); var _SessionController2 = _interopRequireDefault(_SessionController);
-var _auth = require('./app/middleware/auth'); var _auth2 = _interopRequireDefault(_auth);
+var _ToolController = require("./app/controllers/ToolController");
+var _ToolController2 = _interopRequireDefault(_ToolController);
+var _UserController = require("./app/controllers/UserController");
+var _UserController2 = _interopRequireDefault(_UserController);
+var _SessionController = require("./app/controllers/SessionController");
+var _SessionController2 = _interopRequireDefault(_SessionController);
+var _auth = require("./app/middleware/auth");
+var _auth2 = _interopRequireDefault(_auth);
 
 const routes = new (0, _express.Router)();
 
@@ -23,4 +32,4 @@ routes.delete("/users/:id", _UserController2.default.delete);
 routes.put("/tools/:id", _ToolController2.default.update);
 routes.delete("/tools/:id", _ToolController2.default.delete);
 
-exports. default = routes;
+exports.default = routes;
