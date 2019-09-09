@@ -7,6 +7,8 @@ VUTTR is a simple API builded with NodeJS, Express, MongoDB and Mongoose, that p
 - [Node](https://nodejs.org/en/) (v10 or later)
 - [Yarn](https://yarnpkg.com/pt-BR/) ou [NPM](https://www.npmjs.com/)
 
+ps: if you have some problem with bcrypt libs, just use ```$ npm install```
+
 ## Documentations
 
 ### Swagger
