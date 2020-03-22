@@ -1,6 +1,6 @@
 # VUTTR-API
 
-VUTTR is a NodeJS API that provides user manage a his with his tecnology tools.
+VUTTR is a NodeJS API that provides user manage a his tecnology tools.
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
@@ -10,8 +10,7 @@ VUTTR is a NodeJS API that provides user manage a his with his tecnology tools.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 ### Prerequisites
 
 To run this project locally you must have installed
@@ -23,14 +22,10 @@ To run this project locally you must have installed
 ps: if you have some problem with bcrypt libs, just use
 `$ npm install`
 
-```
-Give examples
-```
-
 Clone repo:
 
 ```
-https://github.com/paulohlips/VUTTR-API.git
+git clone https://github.com/paulohlips/VUTTR-API.git
 ```
 
 Inside repo folder:
@@ -98,11 +93,11 @@ http://localhost:3003
 
 ## Built With
 
-- ⚛️ **NodeJS** — A JavaScript runtime built on Chrome's V8 JavaScript engine.
-- ⚛️ **ExpressJS** — A Node js web application server framework.  
-- 💹 **MongoDB** — A document-oriented NoSQL database used for high volume data storage.
-- 💹 **Mongoose** — An Object Data Modeling (ODM) library for MongoDB and Node. js.
-- 💹 **Docker** —  The de facto standard to build and share containerized apps.
+- **NodeJS** — A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **ExpressJS** — A Node js web application server framework.  
+- **MongoDB** — A document-oriented NoSQL database used for high volume data storage.
+- **Mongoose** — An Object Data Modeling (ODM) library for MongoDB and Node. js.
+- **Docker** —  The de facto standard to build and share containerized apps.
 
 ### Swagger
 
