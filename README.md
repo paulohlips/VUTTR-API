@@ -1,6 +1,6 @@
 # VUTTR-API
 
-VUTTR is a NodeJS API that provides user manage a lis with his tecnology tools.
+VUTTR is a NodeJS API that provides user manage a his with his tecnology tools.
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
